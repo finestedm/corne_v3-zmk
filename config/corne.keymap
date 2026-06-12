@@ -22,6 +22,7 @@
             quick_tap_ms = <180>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
             global-quick-tap;
         };
     };
@@ -29,34 +30,34 @@
     keymap {
         compatible = "zmk,keymap";
 
-        qwerty {
+        colemak {
             bindings = <
-&tab_esc                 &kp Q           &kp W           &kp E         &kp R             &kp T         &kp Y        &kp U         &kp I          &kp O            &kp P               &kp BACKSPACE
-&kp LCTRL                &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D   &hm LEFT_SHIFT F  &kp G         &kp H        &hm RSHIFT J  &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
-&mt LEFT_SHIFT CAPSLOCK  &kp Z           &kp X           &kp C         &kp V             &kp B         &kp N        &kp M         &kp COMMA      &kp DOT          &kp FSLH            &kp RIGHT_SHIFT
-                                                         &kp LEFT_GUI  &lt 2 SPACE       &lt 3 DELETE  &lt 2 ENTER  &lt 1 SPACE   &kp RIGHT_ALT
+&tab_esc                 &kp Q             &kp W           &kp F        &kp P            &kp B          &kp J        &kp L            &kp U         &kp Y            &kp SQT                    &kp BACKSPACE
+&kp LCTRL                &hm LEFT_SHIFT A  &hm LEFT_GUI R  &hm LCTRL S  &hm RIGHT_ALT T  &kp G          &kp K        &hm RIGHT_ALT N  &hm RCTRL E   &hm RIGHT_GUI I  &hm RIGHT_SHIFT O          &kp SQT
+&mt LEFT_SHIFT CAPSLOCK  &kp Z             &kp X           &kp C        &kp D            &kp V          &kp M        &kp H            &kp COMMA     &kp DOT          &mt FSLH NON_US_BACKSLASH  &kp RIGHT_SHIFT
+                                                           &lt 5 ENTER  &lt 2 TAB        &kp BACKSPACE  &lt 6 SPACE  &lt 3 ENTER      &lt 4 DELETE
             >;
         };
 
-        lower {
+        blt {
             bindings = <
-&kp TAB           &kp N1           &kp N2       &kp N3     &kp N4          &kp N5           &kp N6            &kp N7             &kp N8         &kp N9                &kp N0                 &kp BACKSPACE
-&kp LEFT_CONTROL  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR      &kp PERCENT      &kp CARET         &kp AMPERSAND      &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE
-&kp LEFT_SHIFT    &kp PLUS         &kp UNDER    &kp PIPE   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp MINUS             &kp EQUAL              &kp RIGHT_SHIFT
-                                                &none      &none           &none            &none             &none              &none
+&trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL  &trans           &trans        &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp C_VOLUME_UP  &kp C_VOL_DN  &kp K_MUTE    &trans  &trans
+                        &trans  &trans  &trans  &trans          &trans           &trans
             >;
         };
 
-        upper {
+        navi_right {
             bindings = <
-&kp ESCAPE        &kp F1  &kp F2     &kp F3      &kp F4       &kp F5           &kp F6          &kp F7          &kp F8        &kp F9           &kp F10  &kp DELETE
-&kp LEFT_CONTROL  &none   &none      &none       &none        &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none    &kp F11
-&kp LEFT_SHIFT    &none   &kp K_CUT  &kp K_COPY  &kp K_PASTE  &none            &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none    &kp F12
+&kp ESCAPE        &kp F1  &kp F2     &kp F3      &kp F4       &kp F5           &kp F6          &kp F7          &kp F8        &kp F9           &kp F10    &kp DELETE
+&kp LEFT_CONTROL  &none   &none      &none       &none        &kp PRINTSCREEN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp RIGHT  &kp F11
+&kp LEFT_SHIFT    &none   &kp K_CUT  &kp K_COPY  &kp K_PASTE  &none            &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none      &kp F12
                                      &none       &none        &none            &none           &none           &none
             >;
         };
 
-        extras {
+        navi_left {
             bindings = <
 &none              &kp C_PREV  &kp C_NEXT  &kp C_PP  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &none            &none            &bt BT_CLR
 &sys_reset         &none       &none       &none     &none              &kp C_BRI_UP  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &sys_reset
@@ -65,12 +66,30 @@
             >;
         };
 
-        colemak {
+        F1_F12 {
             bindings = <
-&tab_esc                &kp Q           &kp W               &kp F                   &kp P             &kp G         &kp J        &kp L              &kp U                &kp Y            &kp SEMICOLON    &kp BACKSPACE
-&kp LCTRL               &hm LEFT_GUI A  &hm LEFT_ALT R      &hm LEFT_CONTROL S      &hm LEFT_SHIFT T  &kp D         &kp H        &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I  &hm RIGHT_GUI O  &kp SQT
-&mt LEFT_SHIFT CAPSLOCK &kp Z           &kp X               &kp C                   &kp V             &kp B         &kp K        &kp M              &kp COMMA            &kp DOT          &kp FSLH         &kp RIGHT_SHIFT
-                                        &kp LEFT_GUI        &lt 2 SPACE             &lt 3 DELETE      &lt 2 ENTER   &lt 1 SPACE  &kp RIGHT_ALT
+&tab_esc                 &kp Q           &kp W           &kp F               &kp P             &kp G         &kp J        &kp L              &kp U                &kp Y            &kp SEMICOLON    &kp BACKSPACE
+&kp LCTRL                &hm LEFT_GUI A  &hm LEFT_ALT R  &hm LEFT_CONTROL S  &hm LEFT_SHIFT T  &kp D         &kp H        &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I  &hm RIGHT_GUI O  &kp SQT
+&mt LEFT_SHIFT CAPSLOCK  &kp Z           &kp X           &kp C               &kp V             &kp B         &kp K        &kp M              &kp COMMA            &kp DOT          &kp FSLH         &kp RIGHT_SHIFT
+                                                         &kp LEFT_GUI        &lt 2 SPACE       &lt 3 DELETE  &lt 2 ENTER  &lt 0 SPACE        &kp RIGHT_ALT
+            >;
+        };
+
+        numerical {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Focus_switch {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
