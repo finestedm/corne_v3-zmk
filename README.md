@@ -1,4 +1,4 @@
-# Clover - Corne V3
+# FunkeeB - Corne V4 ProMicro Edition
 
 ZMK config and relevant files for my custom built Corne v4 Promicro Edition by klouderone.
 
