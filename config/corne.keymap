@@ -36,7 +36,7 @@
 &tab_esc                 &kp Q             &kp W           &kp F        &kp P            &kp B          &kp J        &kp L            &kp U         &kp Y            &kp SQT                    &kp BACKSPACE
 &kp LCTRL                &hm LEFT_SHIFT A  &hm LEFT_GUI R  &hm LCTRL S  &hm RIGHT_ALT T  &kp G          &kp K        &hm RIGHT_ALT N  &hm RCTRL E   &hm RIGHT_GUI I  &hm RIGHT_SHIFT O          &kp SQT
 &mt LEFT_SHIFT CAPSLOCK  &kp Z             &kp X           &kp C        &kp D            &kp V          &kp M        &kp H            &kp COMMA     &kp DOT          &mt FSLH NON_US_BACKSLASH  &kp RIGHT_SHIFT
-                                                           &lt 5 ENTER  &lt 0 TAB        &kp BACKSPACE  &lt 2 SPACE  &lt 3 ENTER      &lt 4 DELETE
+                                                           &lt 5 ENTER  &lt 0 TAB        &kp BACKSPACE  &lt 2 SPACE  &lt 3 ENTER      &lt 0 DELETE
             >;
         };
 
@@ -62,17 +62,17 @@
             bindings = <
 &none              &kp C_PREV  &kp C_NEXT  &kp C_PP  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &none            &none            &bt BT_CLR
 &sys_reset         &none       &none       &none     &none              &kp C_BRI_UP  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &sys_reset
-&ext_power EP_TOG  &none       &to 0       &to 4     &none              &kp C_BRI_DN  &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG
+&ext_power EP_TOG  &none       &to 0       &to 0     &none              &kp C_BRI_DN  &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG
                                            &none     &none              &none         &none            &none            &none
             >;
         };
 
         F1_F12 {
             bindings = <
-&tab_esc                 &kp Q           &kp W           &kp F               &kp P             &kp G         &kp J        &kp L              &kp U                &kp Y            &kp SEMICOLON    &kp BACKSPACE
-&kp LCTRL                &hm LEFT_GUI A  &hm LEFT_ALT R  &hm LEFT_CONTROL S  &hm LEFT_SHIFT T  &kp D         &kp H        &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I  &hm RIGHT_GUI O  &kp SQT
-&mt LEFT_SHIFT CAPSLOCK  &kp Z           &kp X           &kp C               &kp V             &kp B         &kp K        &kp M              &kp COMMA            &kp DOT          &kp FSLH         &kp RIGHT_SHIFT
-                                                         &kp LEFT_GUI        &lt 0 SPACE       &lt 3 DELETE  &lt 0 ENTER  &lt 0 SPACE        &kp RIGHT_ALT
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans   &trans   &trans  &trans  &trans  &trans
             >;
         };
 
@@ -82,6 +82,15 @@
 &trans  &trans         &trans  &trans  &trans  &trans  &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_SLASH  &trans
 &trans  &trans         &trans  &trans  &trans  &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA     &trans
                                &trans  &trans  &trans  &kp NUMBER_0  &trans        &kp EQUAL
+            >;
+        };
+
+        focus_switch {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(NUMBER_1)  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans            &trans
             >;
         };
     };
