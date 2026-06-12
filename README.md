@@ -28,7 +28,7 @@ Flash MCU with a software generated in the actions section of Github. Later you 
 
 ## Images
 
-|           Corne v3            |            Photos             |
+|          Corne v4 MX          |            Photos             |
 | :---------------------------: | :---------------------------: |
-| ![Photo 1](assets/photo1.jpg) | ![Photo 2](assets/photo3.jpg) |
-| ![Photo 3](assets/photo2.jpg) | ![Photo 4](assets/photo4.jpg) |
+| ![Photo 1](PXL_20260611_052722855.PORTRAIT.jpg) | ![Photo 2](PXL_20260611_172306024.MP.jpg) |
+| ![Photo 3](PXL_20260611_171750737.MP.jpg) | ![Photo 4](PXL_20260611_172642045.MP.jpg) |
