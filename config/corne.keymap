@@ -96,6 +96,16 @@
             bindings = <&kp SEMICOLON>;
             key-positions = <32 33>;
         };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <25 28>;
+        };
     };
 
     keymap {
