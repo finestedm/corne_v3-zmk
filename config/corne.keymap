@@ -54,6 +54,25 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <13 22>;
+        };
+
+        alttab {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <13 14 15>;
+        };
+
+        tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <1 13>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
