@@ -109,6 +109,11 @@
             bindings = <&kp DELETE>;
             key-positions = <25 28>;
         };
+
+        Combos {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <39 38>;
+        };
     };
 
     keymap {
