@@ -71,6 +71,31 @@
             bindings = <&kp TILDE>;
             key-positions = <1 13>;
         };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <26 27>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <27 28>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <28 29>;
+        };
+
+        screetshot {
+            bindings = <&kp LG(LS(S))>;
+            key-positions = <9 10>;
+        };
+
+        semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <32 33>;
+        };
     };
 
     keymap {
